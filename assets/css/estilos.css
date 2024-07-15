@@ -1,0 +1,26 @@
+.img-rounded {
+    border-radius: 100%;
+}
+
+.img-oculta {
+    display: none;
+}
+
+.img-country {
+    width: 100px;
+}
+
+.img-pokemon {
+    width: 120px;
+}
+.img-pokemon-card {
+    width: 200px;
+
+}
+
+.stcicky-top-pokemon {
+position: -webkit-sticky;
+position: sticky;
+top: -100px;
+z-index: 1020;
+}

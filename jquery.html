@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nico Nunez">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/estilos.css">
+
+
+    <title>Javascript</title>
+</head>
+
+<body onload="mostrarFechaActualizable();">
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-brands fa-js fa-3x"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fs-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Javascript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="randomuserme.html">RandonUserMe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="jquery.html">Jquery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="openweathermap.html">OpenWeatherMap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="countries.html">Countries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="pokemon.html">Pokemon</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container mt-2 p-4 text-center text-white bg-dark rounded-bottom">
+        <h1 class="display-1">Introducción a Jquery <br> una biblioteca de Javascript</h1>
+        <p id="fecha_actualizable"></p>
+    </header>
+
+    <main class="container my-4">
+        <div class="row py-4">
+            <p id="parrafo01">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsa optio facere vitae recusandae animi autem, quia sed. Eligendi quisquam pariatur molestiae quidem. Facilis quis aut soluta iure impedit voluptate provident, quod nam est. Rem debitis totam corrupti illo molestias itaque officia voluptate necessitatibus cupiditate porro. Deleniti recusandae cupiditate aperiam voluptas nisi iure impedit autem, animi quibusdam velit eos quaerat tempora itaque, necessitatibus saepe ea natus labore? Sit enim quidem ut. Eos, eius, repudiandae repellendus omnis alias nesciunt eligendi molestias laboriosam eveniet iure commodi facere aliquam ipsam officia dignissimos libero sunt necessitatibus. Distinctio ut sed ipsa illo vitae officiis nesciunt.</p>
+        </div>
+        <hr>
+        <div class="row py-4">
+            <p id="parrafo02">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsa optio facere vitae recusandae animi autem, quia sed. Eligendi quisquam pariatur molestiae quidem. Facilis quis aut soluta iure impedit voluptate provident, quod nam est. Rem debitis totam corrupti illo molestias itaque officia voluptate necessitatibus cupiditate porro. Deleniti recusandae cupiditate aperiam voluptas nisi iure impedit autem, animi quibusdam velit eos quaerat tempora itaque, necessitatibus saepe ea natus labore? Sit enim quidem ut. Eos, eius, repudiandae repellendus omnis alias nesciunt eligendi molestias laboriosam eveniet iure commodi facere aliquam ipsam officia dignissimos libero sunt necessitatibus. Distinctio ut sed ipsa illo vitae officiis nesciunt.</p>
+        </div>
+        <hr>
+        <div class="row py-4 text-center">
+            <div class="col">
+                <img id="ampolleta" src="assets/img/pic_bulboff.gif" alt="Luz apagada"> 
+            </div> 
+        </div> 
+        <hr>
+        <div class="row py-4">
+            <p id="text-hover">Acerca tu mouse a este párrafo</p>
+        </div>
+        <hr>
+        <div class="row py-4">
+            <div class="mb-3">
+                <input class="form-control" type="text" id="frase" name="frase" placeholder="Ingresa tu frase del día y luego presiona el botón...">
+            </div>
+            <div class="mb-3">
+                <button type="button" id="button01" class="btn btn-outline-primary">Presioname!!!</button>
+            </div>
+            <p id="frase_ingresada"></p>
+        </div>
+        <hr>
+        <h2>Manejo de Funciones en Jquery</h2>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo Función 'click'</h3>
+                <button id="button02" type="button" class="btn btn-outline-primary">Presioname</button>
+            </div>
+            <div class="col-md-6">
+                <p id="resolucion"></p>
+            </div>
+        </div>
+        <hr>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo Función '.hide' y '.show'</h3>
+                <button id="button03" type="button" class="btn btn-outline-primary">Presioname para ocultar el texto</button>
+                <button id="button04" type="button" class="btn btn-outline-primary">Presioname para mostrar el texto</button>
+            </div>
+            <div class="col-md-6">
+                <p id="parrafo03">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quasi natus cupiditate suscipit sed reiciendis quos tenetur veritatis illum labore perspiciatis corrupti earum eum quae voluptatum, ipsum illo quaerat libero eaque aperiam magnam voluptates sapiente! Porro animi harum error fugiat. Aut fuga neque veniam facilis quod! Doloribus impedit neque omnis quod vitae totam praesentium corrupti quaerat commodi labore magni non esse est, quos voluptates, suscipit placeat amet nobis minima, fuga nostrum nemo? Enim ex non neque sunt ad perferendis nobis, odit, nemo soluta aperiam laborum alias? Quidem fuga quisquam iste ea velit veniam at quia, blanditiis quos, consequuntur officia cum?</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo Función '.toggle'</h3>
+                <button id="button05" type="button" class="btn btn-outline-primary">Presioname para toggler una imagen"</button>
+            </div>
+            <div class="col-md-6">
+                <img id="imagen_accion05" src="http://picsum.photos/300/300" alt="">
+            </div>
+        </div>
+        <hr>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo Función '.slideDown'</h3>
+                <button id="button06" type="button" class="btn btn-outline-primary">Presioname!!!!</button>
+            </div>
+            <div class="col-md-6">
+                <img class="img-oculta" id="imagen_accion06" src="http://picsum.photos/300/300" alt="">
+            </div>
+        </div>
+        <hr>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo Función '.slideUp'</h3>
+                <button id="button07" type="button" class="btn btn-outline-primary">Presioname!!!!</button>
+            </div>
+            <div class="col-md-6">
+                <img id="imagen_accion07" src="http://picsum.photos/300/300" alt="">
+            </div>
+        </div>
+        <hr>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo Función '.slideToggle'</h3>
+                <button id="button08" type="button" class="btn btn-outline-primary">Presioname!!!!</button>
+            </div>
+            <div class="col-md-6">
+                <ul id="lista_accion08">
+                    <li>Chile</li>
+                    <li>Brasil</li>
+                    <li>Argentina</li>
+                    <li>Perú</li>
+                    <li>Colombia</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo Función '.before'</h3>
+                <button id="button09" type="button" class="btn btn-outline-primary">Presioname!!!!</button>
+            </div>
+            <div class="col-md-6">
+                <p id="parrafo09">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, soluta?</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo Función '.after'</h3>
+                <button id="button10" type="button" class="btn btn-outline-primary">Presioname!!!!</button>
+            </div>
+            <div class="col-md-6">
+                <p id="parrafo10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, soluta?</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo Función '.append'</h3>
+                <button id="button11" type="button" class="btn btn-outline-primary">Presioname!!!!</button>
+            </div>
+            <div class="col-md-6">
+                <ul id="parrafo11">
+
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo Función '.html'</h3>
+                <button id="button12" type="button" class="btn btn-outline-primary">Presioname!!!!</button>
+                <button id="button13" type="button" class="btn btn-outline-primary">Texto vuelve please!!!!</button>
+            </div>
+            <div class="col-md-6">
+                <p id="parrafo12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, soluta?</p>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer class="container-fluid bg-dark pt-4 mt-2">
+        <div class="row text-white">
+            <div class="col-12 col-md-4 mb-3 text-center">
+                <i class="fa-brands fa-js fa-5x"></i>
+                <p>&copy;2024 - Rocket Inc</p>
+                <p>Bootcamp Traineé Python</p>
+            </div>
+            <div class="col-12 col-md-4 mb-3 text-center">
+                <h4>Mapa del sitio</h4>
+                <hr>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="randomuserme.html">RandonUserMe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="jquery.html">Jquery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="openweathermap.html">OpenWeatherMap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="countries.html">Countries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="pokemon.html">Pokemon</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card bg-transparent border-0">
+                    <div class="card-header border-0 text-center">
+                        <h5 class="card-title text-white">
+                            Suscríbete a nuestro newsletter...
+                        </h5>
+                    </div>
+                    <div class="card-body border-0">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico">
+                            <button class="btn btn-outline-light" type="button">Enviar</button>
+                        </div>
+                    </div>
+                    <div class="card-footer border-0 ">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="http://www.github.com" target="_blank">
+                                    <i class="fa-brands fa-github fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="http://www.linkedin.com" target="_blank">
+                                    <i class="fa-brands fa-linkedin fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="http://www.instagram.com" target="_blank">
+                                    <i class="fa-brands fa-instagram fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="http://www.facebook.com" target="_blank">
+                                    <i class="fa-brands fa-facebook fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="http://www.twitter.com" target="_blank">
+                                    <i class="fa-brands fa-x-twitter fa-2x"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="row p-2 text-center text-white">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequatur minus, molestiae
+                doloremque quasi illo nobis! Dolore culpa architecto ipsam.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/scripts.js"></script>
+
+    <script src="assets/js/script_jquery.js"></script>
+</body>
+
+</html>
